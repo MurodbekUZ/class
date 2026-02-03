@@ -473,5 +473,80 @@
 # for test in tests:
 #     print(test.average_speed())
 
-     
+
+# 14-masala. Oziq-ovqat yetkazib berish
+# class Delivery:
+#     def __init__(self, name, amount, distance, rate):
+#         self.name = name
+#         self.amount = amount
+#         self.distance = distance
+#         self.rate = rate
         
+#     def total_cost(self):
+#         return self.amount + (self.distance * self.rate)
+    
+# class FoodDelivery(Delivery):
+#     def delivery_info(self):
+#         cost = super().total_cost()
+#         return f"Oziq-ovqat yetkazib berish: {self.name}, Umumiy xarajat: {cost:.2f} so'm"
+    
+# class GroceryDelivery(Delivery):
+#     def delivery_info(self):
+#         cost = super().total_cost()
+#         return f"Market mahsulotlari yetkazib berish: {self.name}, Umumiy xarajat: {cost:.2f} so'm"
+    
+# items = [
+#     FoodDelivery("Pitsa", 20000, 5, 3000),
+#     GroceryDelivery("Sabzavotlar", 15000, 3, 2000)
+# ]
+
+# total_sum = 0          
+
+# for item in items:
+#     print(item.delivery_info())
+#     total_sum += item.total_cost()
+# print(f"Umumiy xarajat: {total_sum:.2f} so'm")
+
+# 15-masala. Uxlash vaqti kuzatuvchisi
+# class SleepTracker:
+#     def __init__(self, name, sleep_hours):
+#         self.name = name
+#         self.sleep_hours = sleep_hours
+
+#     def average_sleep(self):
+#         return sum(self.sleep_hours) / len(self.sleep_hours)
+
+# class DaySleep(SleepTracker):
+#     def sleep_info(self):
+#         avg = super().average_sleep()
+#         return f"Kunduzgi uyqu o'rtacha vaqti: {avg:.2f} soat"
+    
+# class NightSleep(SleepTracker):
+#     def sleep_info(self):
+#         avg = super().average_sleep()
+#         return f"Kechki uyqu o'rtacha vaqti: {avg:.2f} soat"
+
+# sleep_data = [ 
+#               DaySleep("kecha", 7), 
+#               NightSleep("kunduz", 5)
+                          
+# ]
+
+# for sleep in sleep_data:
+#     print(sleep.sleep_info())
+# total_avg = 0
+# for sleep in sleep_data:
+#     total_avg += sleep.average_sleep()
+
+# print(f"Umumiy o'rtacha uyqu vaqti: {total_avg / len(sleep_data):.2f} soat")
+
+
+
+
+
+
+
+              
+              
+              
+    
