@@ -540,6 +540,37 @@
 
 # print(f"Umumiy o'rtacha uyqu vaqti: {total_avg / len(sleep_data):.2f} soat")
 
+# 16-masala. Budjet rejalashtiruvchisi
+class Budget:
+    def init(self, budget_type, total_budget, expenses):
+        self.type = budget_type
+        self.total_budget = total_budget
+        self.expenses = expenses
+    
+    def remaining_budget(self):
+        return self.total_budget - sum(self.expenses)
+
+
+class FamilyBudget(Budget):
+    def remaining_budget(self):
+        qoldiq = super().remaining_budget()
+        return f"Oila budjet qoldig'i: ${qoldiq}"
+
+
+class PersonalBudget(Budget):
+    def remaining_budget(self):
+        qoldiq = super().remaining_budget()
+        return f"Shaxsiy budjet qoldig'i: ${qoldiq}"
+
+
+# Test
+budgetlar = [
+    FamilyBudget("Oila", 1000, [200, 300]),
+    PersonalBudget("Shaxsiy", 500, [100, 50])
+]
+
+for budget in budgetlar:
+    print(budget.remaining_budget()
 
 
 
